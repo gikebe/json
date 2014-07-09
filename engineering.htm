@@ -8,18 +8,20 @@ function myFunction(arr) {
     var out = "";
     var i;
 	var j;
+	var count=0;
 	'<table border=1><tr><td>Community Village</td><td>Functioning</td></tr>'
     for(i = 0; i<arr.length; i++) {
         out += '<table border=1><tr><td>' + arr[i].communities_villages + '</td><td>'+ arr[i].water_functioning + '</td></tr>';
-		if (arr[i].water_functioning='yes')
+		if (arr[i].water_functioning=="yes")
 		{
-			for(j = 0; j<arr.length; j++) {
+			count+=1;
+			//for(j = 0; j<arr.length; j++) {
 				//window.alert(arr[i].water_functioning);
-			}			
+			//}			
 		}
     }
     document.getElementById("challenge").innerHTML = out;
-	'No. of Functional water Points:' + document.write(j);
+	 document.write('No. of Functional water Points: ' + count);
 	'</table>'
 }
 </script>
