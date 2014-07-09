@@ -8,8 +8,11 @@ function myFunction(arr) {
     var out = "";
     var i;
 	var j;
+	var k;
+	var l;
 	var count=0;
 	var count2=0;
+	var count3=0;
 	var nonfunctionalwaterpoints=0;
 	'<table border=1><tr><td>Community Village</td><td>Functioning</td></tr>'
     for(i = 0; i<arr.length; i++) {
@@ -29,12 +32,32 @@ function myFunction(arr) {
 		{
 			count2+=1;				
 		}
-		nonfunctionalwaterpoints=(count2/(count+count2))*100 // calculating [ercentage of non-functional water points
-		//non-functional water points end
+		nonfunctionalwaterpoints=(count2/(count+count2))*100 // calculating percentage of non-functional water points
+		//non-functional water points end		
     }
+	for(i = 0; i<arr.length; i++) {
+	count3=0;
+	count4=0
+		for(j = 0; j<i; j++) {
+			if (arr[i].communities_villages==arr[j].communities_villages){
+			count3+=1;			
+			}
+			count4+=count3;				
+		}
+		//if (count3=count4){
+			//var max_of_array = Math.max.apply(Math, arr);
+			document.write(arr[i].communities_villages + count3 + ' '+'<br>');
+			//document.write(max_of_array + count3 +'<br>');
+		
+		//}
+	}
+	
+		
+	
+	
     document.getElementById("challenge").innerHTML = out;
 	 document.write('No. of Functional water Points: ' + count +'<br>');
-	 document.write('Broken water points: ' + nonfunctionalwaterpoints);
+	 document.write('Broken water points: ' + nonfunctionalwaterpoints+'%');
 	'</table>'
 }
 </script>
