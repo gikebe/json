@@ -1,32 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  $("button").click(function(){
-    $.getJSON("jsonfile.js",function(result){
-      $.each(result, function(i, field){
-        $("div").append(field + " ");
-      });
-    });
-  });
-});
-</script>
-</head>
 <body>
 
-<button>Get Data</button>
-<div>
-  <table><tr><td>communities village</td><td>water functionin</td></tr>
-    <tr><td></td><td></td></tr>
-    <tr><td></td><td></td></tr>
-    <tr><td></td><td></td></tr>
-    <tr><td></td><td></td></tr>
-    <tr><td></td><td></td></tr>
-    <tr><td></td><td></td></tr>
-  </table></td></td></tr></table>
-</div>
+<div id="challenge"></div>
+<script>
+function myFunction(arr) {
+    var out = "";
+    var i;
+    for(i = 0; i<arr.length; i++) {
+        out +=  arr[i].communities_villages + arr[i].water_functioning + '<br>';
+    }
+    document.getElementById("challenge").innerHTML = out;
+}
+</script>
+
+<script src="challenge.js"></script>
 
 </body>
 </html>
