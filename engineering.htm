@@ -35,6 +35,7 @@ function myFunction(arr) {
 		nonfunctionalwaterpoints=(count2/(count+count2))*100 // calculating percentage of non-functional water points
 		//non-functional water points end		
     }
+    document.write('<b><br><u>No. of water points per community village</b></u><br>');
 	for(i = 0; i<arr.length; i++) {
 	count3=0;
 	count4=0
@@ -56,6 +57,7 @@ function myFunction(arr) {
 	
 	
     document.getElementById("challenge").innerHTML = out;
+    document.write('Other Details');
 	 document.write('No. of Functional water Points: ' + count +'<br>');
 	 document.write('Broken water points: ' + nonfunctionalwaterpoints+'%');
 	'</table>'
